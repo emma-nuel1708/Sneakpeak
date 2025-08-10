@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #111;
+}
+header {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  /* background-color: #1e90ff; */
+}
+header .emoji a {
+  font-family: cursive;
+  text-decoration: none;
+  color: antiquewhite;
+}
+header .navlinks {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-end;
+}
+header .navlinks a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: #111;
+  background-color: #fff;
+  padding: 12px 20px;
+  border-radius: 24px;
+  transition: 0.3s ease-in;
+}
+header .navlinks a:hover {
+  background: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.fancy-header {
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+  padding: 40px 0 20px;
+}
+
+.fancy-header h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 15px #ff7f50;
+  margin-bottom: 0.5rem;
+}
+
+.fancy-header .tagline {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.fancy-header .slogan {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #f97316, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: dripDrop 2s infinite ease-in-out alternate;
+}
+
+.icon,
+.emoji {
+  font-size: 2rem;
+}
+
+.hero {
+  background: url("https://images.unsplash.com/photo-1618354691373-d548b49a4056")
+    no-repeat center center/cover;
+  height: 300px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background-color: black;
+  transition: 1s ease-in;
+}
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s ease-in-out;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+}
+.product-card img {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+.product-name {
+  font-weight: 600;
+  margin: 15px 0 5px;
+}
+.product-price {
+  color: #1e90ff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.btn {
+  background: #1e90ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap");
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dripDrop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
