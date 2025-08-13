@@ -9,12 +9,12 @@ body {
   color: #111;
 }
 header {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 0;
   /* background-color: #1e90ff; */
 }
 header .emoji a {
@@ -76,23 +76,13 @@ header .navlinks a:hover {
   font-size: 2rem;
 }
 
-.hero {
-  background: url("https://images.unsplash.com/photo-1618354691373-d548b49a4056")
-    no-repeat center center/cover;
-  height: 300px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-}
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 40px;
+  gap: 15px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 40px 0 20px;
   background-color: black;
   transition: 1s ease-in;
 }
@@ -105,10 +95,10 @@ header .navlinks a:hover {
   transition: transform 0.4s ease-in-out;
 }
 .product-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 }
 .product-card img {
-  width: 100%;
+  width: 75%;
   margin: 0 auto;
   border-radius: 8px;
 }
@@ -129,13 +119,30 @@ header .navlinks a:hover {
   border-radius: 5px;
   cursor: pointer;
 }
+.products #lastchild {
+  display: none;
+}
 
 footer {
   color: #fff;
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 15px 0;
+  padding: 25px 0 5px;
+}
+footer p{
+  margin-bottom: 10px
+}
+footer p a{
+  text-decoration: none;
+  color: #1e90ff;
+}
+footer p a:hover{
+  color: #f97316;
+}
+footer p span{
+  color: #1e90ff;
+  font-weight: 700
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap");
@@ -158,5 +165,23 @@ footer {
   }
   100% {
     transform: translateY(5px);
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  header .emoji a {
+    font-size: 30px;
+  }
+  .products {
+    gap: 15px;
+  }
+  .products #lastchild {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 978px) {
+  .products #lastchild {
+    display: none;
   }
 }
