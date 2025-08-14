@@ -124,6 +124,30 @@ header .navlinks a:hover {
   display: none;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+  animation: float 1.5s infinite ease-in-out;
+  transform: translateY(100px); /* initially offscreen */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.scroll-to-top.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 footer {
   color: #fff;
   width: 100%;
@@ -181,6 +205,18 @@ footer p span {
   }
   100% {
     transform: translateY(5px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
